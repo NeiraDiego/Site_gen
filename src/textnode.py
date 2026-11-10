@@ -14,7 +14,7 @@ class TextNode:
         self.text_type = text_type
         self.url = url
 
-    def __eq__(self, other: TextNode) -> bool:
+    def __eq__(self, other) -> bool:
         if not isinstance(other, TextNode):
             return False
         return (

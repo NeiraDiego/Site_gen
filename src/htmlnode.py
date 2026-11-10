@@ -23,3 +23,11 @@ class HTMLNode:
         Children = {self.children}
         Props = {self.props_to_html}"""
 
+    def __eq__(self, other) -> bool:
+        if not isinstance(other, HTMLNode):
+            return False
+        return (
+        self.tag == other.tag or
+        self.value == other.value or
+        self.children == other.children or 
+        self.props == other.props)
