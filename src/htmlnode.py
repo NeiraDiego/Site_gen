@@ -27,7 +27,7 @@ class HTMLNode:
         if not isinstance(other, HTMLNode):
             return False
         return (
-        self.tag == other.tag or
-        self.value == other.value or
-        self.children == other.children or 
+        self.tag == other.tag and
+        self.value == other.value and
+        self.children == other.children and 
         self.props == other.props)
